@@ -1,13 +1,34 @@
 /*!
- * Start Bootstrap - Resume v5.0.6 (https://startbootstrap.com/template-overviews/resume)
- * Copyright 2013-2019 Start Bootstrap
+ * Start Bootstrap - Resume v5.0.2 (https://startbootstrap.com/template-overviews/resume)
+ * Copyright 2013-2018 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-resume/blob/master/LICENSE)
  */
+
+ :root{
+  --primary-text-color: #ee7300c2;
+  --firstName-text-color: #ee7700c2;
+  --lastName-text-color: rgb(134, 69, 9);
+  --headers-text-color: #05284b;
+  --socialIcon-color: white;
+  --socialIcon-background: #037ffa;
+  --socialIcon-background-hover: #58a9eb;
+  --sideNav-active: rgb(26, 187, 34);
+  --image-border: rgba(255, 255, 255, 0.2);
+  --sideBar-background: rgb(134, 69, 9);
+  --email-color: rgb(46, 99, 245);
+
+   /* Not being used */
+   --devIcons: rgb(96, 56, 189);
+   --dropdown-hover: rgba(0, 0, 242, 0.5);
+   --box-shadow: rgba(0,0,0,0.2);
+   --dropdown-background: #939393;
+}
+
 
 body {
   font-family: 'Muli', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   padding-top: 54px;
-  color: #868e96;
+  color: var(--primary-text-color);
 }
 
 @media (min-width: 992px) {
@@ -17,7 +38,13 @@ body {
   }
 }
 
-h1,
+h1{
+  font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--firstName-text-color)
+}
+
 h2,
 h3,
 h4,
@@ -26,7 +53,7 @@ h6 {
   font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   font-weight: 700;
   text-transform: uppercase;
-  color: #343a40;
+  color: var(--headers-text-color)
 }
 
 h1 {
@@ -58,8 +85,8 @@ p.lead {
   display: inline-block;
   height: 3.5rem;
   width: 3.5rem;
-  background-color: #495057;
-  color: #fff !important;
+  background-color: var(--socialIcon-background);
+  color: var(--socialIcon-color) !important;
   border-radius: 100%;
   text-align: center;
   font-size: 1.5rem;
@@ -72,7 +99,7 @@ p.lead {
 }
 
 .social-icons a:hover {
-  background-color: #BD5D38;
+  background-color: var(--socialIcon-background-hover);
 }
 
 .dev-icons {
@@ -80,7 +107,7 @@ p.lead {
 }
 
 .dev-icons .list-inline-item i:hover {
-  color: #BD5D38;
+  color: var(--devIcons);
 }
 
 #sideNav .navbar-nav .nav-item .nav-link {
@@ -90,7 +117,7 @@ p.lead {
 }
 
 #sideNav .navbar-toggler:focus {
-  outline-color: #d48a6e;
+  outline-color: var(--sideNav-active);
 }
 
 @media (min-width: 992px) {
@@ -109,6 +136,7 @@ p.lead {
     width: 17rem;
     height: 100vh;
   }
+
   #sideNav .navbar-brand {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -116,11 +144,13 @@ p.lead {
     margin: auto auto 0;
     padding: 0.5rem;
   }
+
   #sideNav .navbar-brand .img-profile {
     max-width: 10rem;
     max-height: 10rem;
-    border: 0.5rem solid rgba(255, 255, 255, 0.2);
+    border: 0.5rem solid var(--image-border);
   }
+
   #sideNav .navbar-collapse {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -134,6 +164,7 @@ p.lead {
     width: 100%;
     margin-bottom: auto;
   }
+
   #sideNav .navbar-collapse .navbar-nav {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -141,9 +172,11 @@ p.lead {
     flex-direction: column;
     width: 100%;
   }
+
   #sideNav .navbar-collapse .navbar-nav .nav-item {
     display: block;
   }
+
   #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
     display: block;
   }
@@ -163,6 +196,7 @@ section.resume-section .resume-item .resume-date {
   section.resume-section {
     min-height: 100vh;
   }
+
   section.resume-section .resume-item .resume-date {
     min-width: 18rem;
   }
@@ -176,17 +210,142 @@ section.resume-section .resume-item .resume-date {
 }
 
 .bg-primary {
-  background-color: #BD5D38 !important;
+  background-color: var(--sideBar-background) !important;
 }
 
 .text-primary {
-  color: #BD5D38 !important;
+  color: var(--lastName-text-color) !important;
 }
 
 a {
-  color: #BD5D38;
+  color: var(--email-color);
 }
 
 a:hover, a:focus, a:active {
-  color: #824027;
+  color: #5c7add;
 }
+
+.blender{
+    display:block;
+    top: 0.2em;
+    margin-left:-1.6em;
+    margin-right: 0.1em;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:90%;
+    display:inline-block;
+    background-image: url('../svg/blender.svg');
+    height: 20px;
+    width: 20px;
+}
+
+.blender-box{
+  position: relative;
+  display:block;
+  width: 100%;
+  height: 300px;
+}
+
+.img1{
+  background-image: url(https://cdn.thingiverse.com/renders/75/da/54/54/40/e40128854231cf98eea60302b5a5b479_preview_featured.jpg);
+  background-size: cover;
+  resize: both;
+  overflow: scroll;
+  width: 25%;
+  height: 300px;
+  float: left;
+}
+
+.img2{
+  background-image: url(https://cdn.thingiverse.com/renders/75/da/54/54/40/e40128854231cf98eea60302b5a5b479_preview_featured.jpg);
+  background-size: cover;
+  resize: both;
+  overflow: scroll;
+  width: 25%;
+  height: 300px;
+  float: left;
+}
+
+.img3{
+  background-image: url(https://cdn.thingiverse.com/renders/75/da/54/54/40/e40128854231cf98eea60302b5a5b479_preview_featured.jpg);
+  background-size: cover;
+  resize: both;
+  overflow: scroll;
+  width: 25%;
+  height: 300px;
+  float: left;
+}
+
+.img4{
+  background-image: url(https://cdn.thingiverse.com/renders/75/da/54/54/40/e40128854231cf98eea60302b5a5b479_preview_featured.jpg);
+  background-size: cover;
+  resize: both;
+  overflow: scroll;
+  width: 25%;
+  height: 300px;
+  float: left;
+}
+
+.dropbtn {
+  color: inherit;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--dropdown-background);
+  min-width: 800px;
+  box-shadow: 0px 8px 16px 0px var(--box-shadow);
+  z-index: 1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: var(--dropdown-hover)}
+
+.gist {
+  overflow: none;
+}
+
+.gist :first-child{
+  max-width: 100%;
+}
+
+.gist-data {
+  overflow: none;
+}
+
+.gist .blob-wrapper.data {
+  max-height: 200px;
+  max-width: 500px;
+  overflow: scroll;
+}
+
+.gist-meta{
+  /* affect the bottom bar */
+  visibility: hidden;
+}
+
+.gist-file{
+  max-height: 200px;
+  max-width: 500px;
+}
+
+.float-left
+{
+  max-width: 50%;
+}
+
+.float-right
+{
+  max-width: 50%;
+}
+
